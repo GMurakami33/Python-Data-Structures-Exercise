@@ -19,3 +19,10 @@ def read_file_list(filename):
     # hint: when you read lines of files, there will be a "newline"
     # (end-of-line character) at the end of each line, and you want to
     # strip that off before you print it. Do some research on that!
+    try:
+        with open(filename, 'r') as file:
+            for line in file:
+                line = line.rstrip('\n')
+                print(f"- {line}")
+    except FileNotFoundError:
+        raise FileNotFoundError(f"File '{filename}' not found.")

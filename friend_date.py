@@ -1,3 +1,4 @@
+
 def friend_date(a, b):
     """Given two friends, do they have any hobbies in common?
 
@@ -16,3 +17,8 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    hobbies_a = a[2]
+    hobbies_b = b[2]
+
+    common_hobbies = set(hobbies_a) & set(hobbies_b)
+    return bool(common_hobbies)

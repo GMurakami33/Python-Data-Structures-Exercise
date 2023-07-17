@@ -7,3 +7,8 @@ def frequency(lst, search_term):
         >>> frequency([1, 4, 3], 7)
         0
     """
+    freq = 0
+    for i in range(len(lst)): 
+        if search_term == lst[i]:
+            freq += 1
+    return freq

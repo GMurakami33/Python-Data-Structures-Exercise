@@ -7,3 +7,14 @@ def vowel_count(phrase):
         >>> vowel_count('HOW ARE YOU? i am great!') 
         {'o': 2, 'a': 3, 'e': 2, 'u': 1, 'i': 1}
     """
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    frequency_map = {}
+
+    for char in phrase:
+        if char.lower() in vowels:
+            if char.lower() in frequency_map:
+                frequency_map[char.lower()] += 1
+            else:
+                frequency_map[char.lower()] = 1
+
+    return frequency_map
